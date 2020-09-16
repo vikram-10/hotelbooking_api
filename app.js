@@ -72,9 +72,9 @@ app.post("/customer",function(req,res){
 });
 
 app.get("/listings/:id",function(req,res){
-     let id=req.params.id;
+     let paramid=req.params.id;
      room.forEach(element=>{
-       if(element.id==id){
+       if(element.id==paramid){
         customer.forEach(element1=>{
           if(element.id==element1.roomID){
             let obj={
@@ -90,8 +90,7 @@ app.get("/listings/:id",function(req,res){
       }
      });
      res.json(correlation);
-})
-
+});
 
 app.listen(3000,function(err){
     console.log("Server has started!");
