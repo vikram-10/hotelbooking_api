@@ -79,7 +79,8 @@ app.get("/listings/:id",function(req,res){
             let obj={
               "roomName":element.roomName,
               "status":element.status,
-              "customerName":element1.status,
+              "customerName":element1.customerName,
+              "Date":element1.Date,
               "startTime":element1.startTime,
               "endTime":element1.endTime
             }
